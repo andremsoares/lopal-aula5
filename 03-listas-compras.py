@@ -10,7 +10,9 @@ def remover():
     item = input("Digite qual item da lista deseja remover: ").lower()
     lista.remove(item)
     
-
+def modificar():
+    posicao_item = lista.index(input("Qual item deseja remover? ").lower())
+    lista[posicao_item] = input("Qual item deseja adicionar? ")
     
 lista = ["Pão, Banana, Maçã, Limão, Queijo, Presunto, Refrigerante"]
 
@@ -30,6 +32,8 @@ while True:
         cadastrar()
     elif opcao == "3":
         remover()
+    elif opcao == "4":
+        modificar()
     elif opcao == "0":
         print ("Saindo do sistema...")
         break
