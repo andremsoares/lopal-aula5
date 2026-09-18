@@ -19,6 +19,12 @@ def retangulo():
     altura = float(input("Qual o valor da altura do retângulo? "))
     resultado = base * altura
     print (f"A área do seu retângulo é {resultado}")
+    
+def paralelogramo():
+    base = float(input("Qual o valor da base do paralelogramo? "))
+    altura = float(input("Qual o valor da altura do paralelogramo? "))
+    resultado = base * altura
+    print (f"A área do seu paralelogramo é {resultado}")
 
 while True:
     print ("CALCULADORA DE ÁREAS DAS FORMAS GEOMÉTRICAS")
@@ -41,6 +47,8 @@ while True:
         quadrado()
     elif opcao == "4":
         retangulo()
+    elif opcao == "5":
+        paralelogramo()
     elif opcao == "0":
         print ("Saindo do sistema...")
         break
