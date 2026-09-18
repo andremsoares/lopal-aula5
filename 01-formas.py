@@ -14,6 +14,12 @@ def quadrado():
     resultado = lado ** 2
     print (f"A área do seu quadrado é {resultado}")
 
+def retangulo():
+    base = float(input("Qual o valor da base do retângulo? "))
+    altura = float(input("Qual o valor da altura do retângulo? "))
+    resultado = base * altura
+    print (f"A área do seu retângulo é {resultado}")
+
 while True:
     print ("CALCULADORA DE ÁREAS DAS FORMAS GEOMÉTRICAS")
     print ("1 - Círculo")
@@ -33,5 +39,10 @@ while True:
         triangulo()
     elif opcao == "3":
         quadrado()
+    elif opcao == "4":
+        retangulo()
+    elif opcao == "0":
+        print ("Saindo do sistema...")
+        break
     else:
         print("Opção inválida. Tente novamente.")
