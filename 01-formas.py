@@ -25,6 +25,12 @@ def paralelogramo():
     altura = float(input("Qual o valor da altura do paralelogramo? "))
     resultado = base * altura
     print (f"A área do seu paralelogramo é {resultado}")
+    
+def losango():
+    diagonal_maior = float(input("Qual o valor da diagonal maior? "))
+    diagonal_menor = float(input("Qual o valor da diagonal menor? "))
+    resultado = (diagonal_maior * diagonal_menor) / 2
+    print (f"A área do seu losango é {resultado}")
 
 while True:
     print ("CALCULADORA DE ÁREAS DAS FORMAS GEOMÉTRICAS")
@@ -49,6 +55,8 @@ while True:
         retangulo()
     elif opcao == "5":
         paralelogramo()
+    elif opcao == "6":
+        losango()
     elif opcao == "0":
         print ("Saindo do sistema...")
         break
