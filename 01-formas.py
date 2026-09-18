@@ -1,7 +1,13 @@
 def circulo():
-    raio = float(input("Qual o valor do raio do círculo?"))
+    raio = float(input("Qual o valor do raio do círculo? "))
     resultado = 3.14 * raio ** 2
     print (f"A área do círculo é: {resultado}")
+    
+def triangulo():
+    base = float(input("Qual o valor da base do triângulo? "))
+    altura = float(input("Qual o valor da altura do triângulo? "))
+    resultado = (base * altura) / 2
+    print (f"A área do seu triângulo é {resultado}")
 
 while True:
     print ("CALCULADORA DE ÁREAS DAS FORMAS GEOMÉTRICAS")
@@ -18,4 +24,6 @@ while True:
     
     if opcao == "1":
         circulo()
+    elif opcao == "2":
+        triangulo()
     
