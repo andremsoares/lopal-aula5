@@ -3,9 +3,15 @@ def mostrar():
         print(f"{x}")
 
 def cadastrar():
-    lista.append(input("Digite o item a ser cadastrado: "))
+    item = input("Digite o item que deseja adicionar na lista: ")
+    lista.append(item)
 
+def remover():
+    item = input("Digite qual item da lista deseja remover: ").lower()
+    lista.remove(item)
+    
 
+    
 lista = ["Pão, Banana, Maçã, Limão, Queijo, Presunto, Refrigerante"]
 
 while True:
@@ -22,6 +28,8 @@ while True:
         mostrar()
     elif opcao == "2":
         cadastrar()
+    elif opcao == "3":
+        remover()
     elif opcao == "0":
         print ("Saindo do sistema...")
         break
