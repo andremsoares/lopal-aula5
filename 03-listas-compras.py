@@ -1,6 +1,10 @@
 def mostrar():
     for x in lista:
-        print(f"A lista contém: {x}")
+        print(f"{x}")
+
+def cadastrar():
+    lista.append(input("Digite o item a ser cadastrado: "))
+
 
 lista = ["Pão, Banana, Maçã, Limão, Queijo, Presunto, Refrigerante"]
 
@@ -16,6 +20,8 @@ while True:
     
     if opcao == "1":
         mostrar()
+    elif opcao == "2":
+        cadastrar()
     elif opcao == "0":
         print ("Saindo do sistema...")
         break
