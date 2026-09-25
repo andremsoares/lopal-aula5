@@ -17,6 +17,10 @@ tarefas = [
     {"titulo": "Lavar louça", "concluida": "Sim", "prioridade": "Baixa"}
 ]
 
+def mostrar():
+    for tarefa in tarefas:
+        print(f"{tarefa}")
+
 while True:
     print("LISTA DE TAREFAS")
     print("1 - Mostrar todas tarefas")
@@ -30,7 +34,9 @@ while True:
     
     opcao = input("Escolha sua opção: ")
     
-    if opcao == "0":
+    if opcao == "1":
+        mostrar()
+    elif opcao == "0":
         print("Saindo do sistema...")
         break
     else:
