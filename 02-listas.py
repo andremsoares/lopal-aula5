@@ -9,4 +9,3 @@ notas = [7.0, 1.5, 10.0, 8.5, 3.0, 5.5, 5.9]
 
 for x in notas:
     print (f"Suas notas são: {x}")
-    
