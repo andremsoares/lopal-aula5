@@ -30,6 +30,13 @@ def mostrar_pendentes():
     for tarefa in tarefas:
         if tarefa["concluida"] == "Não":
             print(tarefa)
+            
+def mostrar_prioridades():
+    opcao = input("Você deseja ver as tarefas de prioridade alta ou baixa? ").capitalize()
+    for tarefa in tarefas:
+        if opcao == tarefa["prioridade"]:
+            print(tarefa)
+    
     
 
 while True:
@@ -51,6 +58,8 @@ while True:
         mostrar_concluidas()
     elif opcao == "3":
         mostrar_pendentes()
+    elif opcao == "4":
+        mostrar_prioridades()
     elif opcao == "0":
         print("Saindo do sistema...")
         break
