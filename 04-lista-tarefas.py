@@ -19,7 +19,12 @@ tarefas = [
 
 def mostrar():
     for tarefa in tarefas:
-        print(f"{tarefa}")
+        print(tarefa)
+
+def mostrar_concluidas():
+    for tarefa in tarefas:
+        if tarefa["concluida"] == "Sim":
+            print(tarefa)
 
 while True:
     print("LISTA DE TAREFAS")
@@ -36,6 +41,8 @@ while True:
     
     if opcao == "1":
         mostrar()
+    elif opcao == "2":
+        mostrar_concluidas()
     elif opcao == "0":
         print("Saindo do sistema...")
         break
