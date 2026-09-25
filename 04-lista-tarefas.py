@@ -38,7 +38,7 @@ def mostrar_prioridades():
             print(tarefa)
     
 def cadastrar():
-    titulo = input("Digite o título da tarefa: ").capitalize()
+    titulo = input("Digite o nome da nova tarefa: ").capitalize()
     prioridade = input("A prioridade da tarefa é alta ou baixa? ").capitalize()
     nova_tarefa = {
         "titulo": titulo,
@@ -47,6 +47,10 @@ def cadastrar():
     }
     tarefas.append(nova_tarefa)
     print("A tarefa foi adicionada!")
+    
+def finalizar():
+    opcao = input("Qual tarefa que você deseja finalizar? ")
+    
     
 while True:
     print("LISTA DE TAREFAS")
@@ -71,6 +75,8 @@ while True:
         mostrar_prioridades()
     elif opcao == "5":
         cadastrar()
+    elif opcao == "6":
+        finalizar()
     elif opcao == "0":
         print("Saindo do sistema...")
         break
