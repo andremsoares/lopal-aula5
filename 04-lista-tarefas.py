@@ -25,6 +25,12 @@ def mostrar_concluidas():
     for tarefa in tarefas:
         if tarefa["concluida"] == "Sim":
             print(tarefa)
+            
+def mostrar_pendentes():
+    for tarefa in tarefas:
+        if tarefa["concluida"] == "Não":
+            print(tarefa)
+    
 
 while True:
     print("LISTA DE TAREFAS")
@@ -43,6 +49,8 @@ while True:
         mostrar()
     elif opcao == "2":
         mostrar_concluidas()
+    elif opcao == "3":
+        mostrar_pendentes()
     elif opcao == "0":
         print("Saindo do sistema...")
         break
