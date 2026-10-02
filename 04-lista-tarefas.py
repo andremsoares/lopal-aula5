@@ -19,23 +19,37 @@ tarefas = [
 
 def mostrar():
     for tarefa in tarefas:
-        print(tarefa)
+        if tarefa["concluida"] == "Sim":
+            condicao = "X"
+        else:
+            tarefa["concluida"] == "Não"
+            condicao = " "
+        print(f"{tarefa["titulo"]} [{condicao}] {tarefa["prioridade"]}")
 
 def mostrar_concluidas():
     for tarefa in tarefas:
         if tarefa["concluida"] == "Sim":
-            print(tarefa)
+            condicao = "X"
+            print(f"{tarefa["titulo"]} [{condicao}] {tarefa["prioridade"]}")
             
 def mostrar_pendentes():
     for tarefa in tarefas:
         if tarefa["concluida"] == "Não":
-            print(tarefa)
+            condicao = " "
+            print(f"{tarefa["titulo"]} [{condicao}] {tarefa["prioridade"]}")
             
 def mostrar_prioridades():
     opcao = input("Você deseja ver as tarefas de prioridade alta ou baixa? ").capitalize()
     for tarefa in tarefas:
         if opcao == tarefa["prioridade"]:
-            print(tarefa)
+            if tarefa["concluida"] == "Sim":
+                condicao = "X"
+            else:
+                tarefa["concluida"] == "Não"
+                condicao = " "
+            if tarefa["concluida"]:
+                print(f"{tarefa["titulo"]} [{condicao}] {tarefa["prioridade"]}")
+                
     
 def cadastrar():
     titulo = input("Digite o nome da nova tarefa: ").capitalize()
