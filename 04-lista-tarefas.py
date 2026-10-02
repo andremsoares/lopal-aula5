@@ -49,11 +49,18 @@ def cadastrar():
     print("A tarefa foi adicionada!")
     
 def finalizar():
-    finalizar = input("Qual tarefa que você deseja finalizar? ")
+    finalizar = input("Qual tarefa você deseja finalizar? ")
     for tarefa in tarefas:
         if tarefa ["titulo"] == finalizar:
             tarefa ["concluida"] = "Sim"
     print("Sua tarefa foi finalizada!")
+    
+def remover():
+    remover = input("Qual tarefa você deseja remover? ")
+    for tarefa in tarefas:
+        if tarefa["titulo"] == remover:
+            tarefas.remove(tarefa)
+    print("Sua tarefa foi removida.")
     
 while True:
     print("LISTA DE TAREFAS")
@@ -80,6 +87,8 @@ while True:
         cadastrar()
     elif opcao == "6":
         finalizar()
+    elif opcao == "7":
+        remover()
     elif opcao == "0":
         print("Saindo do sistema...")
         break
