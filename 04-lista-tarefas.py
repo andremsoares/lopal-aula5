@@ -49,8 +49,11 @@ def cadastrar():
     print("A tarefa foi adicionada!")
     
 def finalizar():
-    opcao = input("Qual tarefa que você deseja finalizar? ")
-    
+    finalizar = input("Qual tarefa que você deseja finalizar? ")
+    for tarefa in tarefas:
+        if tarefa ["titulo"] == finalizar:
+            tarefa ["concluida"] = "Sim"
+    print("Sua tarefa foi finalizada!")
     
 while True:
     print("LISTA DE TAREFAS")
